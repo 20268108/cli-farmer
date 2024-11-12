@@ -1,0 +1,9 @@
+{
+    "name": "Farm",
+    "balance": 133,
+    "inventory": {
+        "wheat": 0,
+        "potatoes": 0,
+        "carrots": 0
+    }
+}
