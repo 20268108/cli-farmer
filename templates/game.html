@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI Farmer Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to CLI Farmer Game</h1>
+    </header>
+    <main>
+        <section>
+            <h2></h2>
+            {{ session['username'] }}'s Farm
+            <p>Manage your crops to become the best farmer!</p>
+        </section>
+        <section>
+            <h2>Actions</h2>
+            <ul>
+                <li><a href="/harvest">Harvest Crops</a></li>
+
+                <li><a href="/sell">Sell Produce</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 CLI Farmer Game. All rights reserved.</p>
+    </footer>
+</body>
+</html>

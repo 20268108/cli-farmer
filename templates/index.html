@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI Farmer Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Welcome to CLI Farmer Game</h1>
+        <p>Manage your farm and grow your crops!</p>
+        {% if 'username' in session %}
+            <div id="user-info">
+                <p>Welcome, {{ session['username'] }}!</p>
+                <button onclick="logout()">Logout</button>
+            </div>
+            <button onclick="startGame()">Start Game</button>
+        {% else %}
+            <div id="auth-buttons">
+                <button onclick="register()">Register</button>
+                <button onclick="login()">Login</button>
+            </div>
+        {% endif %}
+    </div>
+    <script>
+        function startGame() {
+            window.location.href = '/game';
+        }
+
+        function register() {
+            window.location.href = '/register';
+        }
+
+        function login() {
+            window.location.href = '/login';
+        }
+
+        function logout() {
+            window.location.href = '/logout';
+        }
+    </script>
+</body>
+</html>
