@@ -1,9 +1,10 @@
 {
     "name": "Farm",
-    "balance": 133,
+    "balance": 3200,
     "inventory": {
+        "carrots": 0,
         "wheat": 0,
-        "potatoes": 0,
-        "carrots": 0
-    }
+        "potatoes": 0
+    },
+    "multiplier": 3
 }
